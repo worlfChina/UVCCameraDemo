@@ -48,6 +48,8 @@ public class UvcCameraController {
 
     public void init(MainActivity activity) {
         this.mWeakReference = new WeakReference(activity);
+        mCameraViewInterface.clear();
+        mUvcCameraHandlerList.clear();
         if (null != mWeakReference) {
             MainActivity mainActivity = mWeakReference.get();
             if (null != mainActivity) {
